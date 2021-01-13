@@ -1,0 +1,50 @@
+.cont-product-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 100px;
+    width: 100vw;
+}
+.cont-product {
+     display: flex; 
+     width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px; 
+}
+.cont-product p {
+    font-size: 20px;
+}
+.name-product > p {
+    text-transform: capitalize;
+    width: 150px;
+}
+.cont-btn-product > button {
+    padding: 8px 27px;
+    margin: 0px 15px;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.editar-btn {
+    background-color: #017CFF;
+    border: 2px solid #017CFF;
+}
+.btn-delete {
+    background-color: #E04C5A;
+    border: 2px solid #E04C5A;
+}
+.no-product {
+    text-align: center;
+    margin: 60px 0px;
+    font-size: 50px;
+}
+.link-no-product {
+    text-decoration: none;
+    color: #F97824;
+}
+button:disabled,
+.disableBtn {
+    background-color: gray !important;
+}
+

@@ -1,0 +1,28 @@
+.cont-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0px 0px 4px #DBDBD9;
+}
+
+header {
+    display: flex;
+    flex: 1;
+}
+
+header >a {
+    background: -webkit-linear-gradient(#fc4a1a, #f7b733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+}
+.btn-header {
+    padding: 8px 60px;
+    background-color: #F97824;
+    border: 1px solid #F97824;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
