@@ -46,5 +46,6 @@
 button:disabled,
 .disableBtn {
     background-color: gray !important;
+    border: 1px solid gray !important;
 }
 
