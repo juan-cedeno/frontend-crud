@@ -101,6 +101,7 @@ export const startEditProduct = (product) => {
             if (resp.ok) {
                 dispatch(editProduct(product))
                 dispatch(startSetRemoveLoading())
+                notificationMessage('Success' , 'Product updated' , 'success')
             }
 
 
