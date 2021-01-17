@@ -7,7 +7,6 @@ import { startSetLoading, startSetRemoveLoading } from "./ui"
 export const startCreateProduct = (name , price) => {
 
     return async (dispatch) => {
-
         dispatch(startSetLoading())
 
         try {
@@ -38,19 +37,24 @@ export const startCreateProduct = (name , price) => {
 
 export const startLoadeProduct = () => {
     return async (dispatch) => {
-       
+
+       dispatch(startSetLoading())
+
         try {
             const body = await fechApi('product')
             const resp = await body.json()
 
             if(resp.ok) {
                 dispatch(loadedProduct(resp.product))
+                dispatch(startSetRemoveLoading())
             }else {
                 notificationMessage('Error' , resp.message , 'danger')
+                dispatch(startSetRemoveLoading())
             }
 
         } catch (error) {
             console.log(error);
+            dispatch(startSetRemoveLoading())
         }
 
     }
