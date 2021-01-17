@@ -26,3 +26,7 @@ header >a {
     outline: none;
     cursor: pointer;
 }
+.social  img {
+    width:35px;
+    margin: 0px 10px;
+}
