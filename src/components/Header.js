@@ -2,12 +2,14 @@ import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import github from '../assets/github.png'
 import linkedin from '../assets/linkedin.png'
+import {useSelector} from 'react-redux'
 
 import '../css/header.css'
 
 export const Header = () => {
 
     const history = useHistory()
+    const {loading} = useSelector(state => state.ui)
 
     const handlenClickProduct = () => {
         history.push('/create-product')
@@ -21,7 +23,8 @@ export const Header = () => {
                 </header>
                 <div>
                     <button 
-                    className = 'btn-header'
+                    disabled = {loading}
+                    className = {`${loading ? 'disableBtn btn-header' : 'btn-header'}`}
                     onClick = {handlenClickProduct}
                     >Create product</button>
                 </div>
