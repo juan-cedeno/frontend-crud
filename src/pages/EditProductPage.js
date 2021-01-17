@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useDispatch , useSelector} from 'react-redux'
 import {startEditProduct} from '../action/product'
+import {Redirect} from 'react-router-dom'
 
 export const EditProductPage = () => {
 
@@ -20,6 +21,10 @@ export const EditProductPage = () => {
             setInputValue(productActive)   
         }
     }, [productActive])
+
+    if (!productActive) {
+        return <Redirect to = '/'/>
+    }
 
     const {name , price} = inputValue
 

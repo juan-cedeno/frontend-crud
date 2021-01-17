@@ -5,15 +5,21 @@ import { Product } from './Product'
 
 import '../css/product.css'
 import { Link } from 'react-router-dom'
+import { Loading } from './Loading'
 
 export const ProductList = () => {
 
     const dispatch = useDispatch()
     const {product} = useSelector(state => state.product)
+    const {loading} = useSelector(state => state.ui)
     
     useEffect(() => {
         dispatch(startLoadeProduct())
     }, [dispatch])
+
+    if (loading) {
+        return <Loading/>
+    }
 
     return (
         <>
